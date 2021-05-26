@@ -213,7 +213,7 @@ msgstr "Block with hash {headerHash} does not exists."
 msgid "Browse"
 msgstr "Browse"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "But you are currently farming <0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "No private keys for one or both addresses. Safe only if you are sending 
 msgid "Node ID"
 msgstr "Node ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "None of your plots have passed the plot filter yet."
 
@@ -1742,7 +1742,7 @@ msgstr "This is the time the block was created by the farmer, which is before it
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 

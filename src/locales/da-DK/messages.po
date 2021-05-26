@@ -213,7 +213,7 @@ msgstr "Blok med hash {headerHash} eksisterer ikke."
 msgid "Browse"
 msgstr "Gennemse"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "Men du høster lige nu <0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "Ingen private nøgler for en eller flere adresser. Kun sikker hvis du se
 msgid "Node ID"
 msgstr "Node ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Ingen af dine plotfiler har passeret plotfilteret endnu."
 
@@ -1742,7 +1742,7 @@ msgstr "Dette er tidstemplet fra blokken da den blev farmet af farmeren, hvilket
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Denne tabel viser hvornår din farmer sidst prøvede at vinde en blok udfordring. <0>Lær mere</0>"
 

@@ -213,7 +213,7 @@ msgstr "帶雜湊值 {headerHash} 的區塊不存在。"
 msgid "Browse"
 msgstr "瀏覽"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "但你目前耕種 <0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "一邊或雙邊地址沒有私鑰。只有你發送獎勵到另一個錢
 msgid "Node ID"
 msgstr "節點 ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "你還沒有任何的耕地通過篩選。"
 
@@ -1742,7 +1742,7 @@ msgstr "這是塊農建立區塊的時間，這是在用時間證明最終確定
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "這個表格顯示上次你的農場試著獲勝的區塊挑戰。<0>了解更多</0>"
 

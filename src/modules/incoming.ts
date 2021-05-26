@@ -70,7 +70,6 @@ export default function incomingReducer(
         const started = data.success;
         return { ...state, server_started: started };
       } else if (command === 'account_info') {
-        console.log(data);
         return {
           ...state,
           email: data.email,
@@ -94,9 +93,6 @@ export default function incomingReducer(
         }
       } else if (command === 'farming_info') {
         const last_farming_info = [data, ...state.last_farming_info];
-        console.log('hello1');
-
-        console.log(last_farming_info);
         return {
           ...state,
           last_farming_info,

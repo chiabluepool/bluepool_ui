@@ -213,7 +213,7 @@ msgstr "Блок с хешем {headerHash} не существует."
 msgid "Browse"
 msgstr "Обзор"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "Но в настоящий момент выполняется фарминг на <0/>"
 
@@ -1181,7 +1181,7 @@ msgstr "Не найдено закрытых ключей для одного и
 msgid "Node ID"
 msgstr "Идентификатор узла"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Ни один из ваших участков пока не прошел через фильтр."
 
@@ -1914,7 +1914,7 @@ msgstr "Это момент времени, когда блок был созд�
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Эта таблица показывает вам, когда ваша ферма в последний раз пыталась выиграть испытание при фарминге блока. <0>Подробнее</0>"
 

@@ -14,6 +14,13 @@ export const pingHarvester = () => {
   return action;
 };
 
+export const getConnectionsHarvester = () => {
+  const action = harvesterMessage();
+  action.message.command = 'get_connections';
+  action.message.data = {};
+  return action;
+};
+
 export const getPlots = () => {
   const action = harvesterMessage();
   action.message.command = 'get_plots';

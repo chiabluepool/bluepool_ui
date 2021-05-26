@@ -213,7 +213,7 @@ msgstr "ハッシュ値 {headerHash} のブロックは存在しません。"
 msgid "Browse"
 msgstr "参照"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "しかし、現在 <0/> で耕作中です。"
 
@@ -1009,7 +1009,7 @@ msgstr "いずれか、または両方のアドレスの秘密鍵がありませ
 msgid "Node ID"
 msgstr "ノード ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "お持ちの耕地は現在、どれも耕地フィルターを通過できていません。"
 
@@ -1742,7 +1742,7 @@ msgstr "これが農家がブロックを作成した日時です。時間証明
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "この表には、最後にあなたの畑がブロックチャレンジに勝とうと試みた詳細が記録されています。 <0>詳しく</0>"
 

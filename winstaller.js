@@ -14,16 +14,16 @@ function getInstallerConfig () {
   const outPath = path.join(rootPath, 'release-builds')
 
   return Promise.resolve({
-    appDirectory: path.join(rootPath, 'Chia-win32-x64'),
-    authors: 'Chia Network',
+    appDirectory: path.join(rootPath, 'Bluepool-win32-x64'),
+    authors: 'Bluepool',
     version: process.env.CHIA_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/Chia-Network/chia-blockchain/master/electron-react/src/assets/img/chia.ico',
+    iconUrl: 'https://raw.githubusercontent.com/chiabluepool/bluepool_ui/main/src/assets/img/bluepool.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,
-    exe: 'Chia.exe',
-    setupExe: 'ChiaSetup-' + process.env.CHIA_INSTALLER_VERSION + '.exe',
-    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'chia.ico')
+    exe: 'Bluepool.exe',
+    setupExe: 'BluepoolSetup-' + process.env.CHIA_INSTALLER_VERSION + '.exe',
+    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'bluepool.ico')
   })
 }

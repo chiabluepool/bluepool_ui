@@ -213,7 +213,7 @@ msgstr "Block s hashom {headerHash} neexistuje."
 msgid "Browse"
 msgstr "Vybrať"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr ""
 
@@ -1009,7 +1009,7 @@ msgstr ""
 msgid "Node ID"
 msgstr "Id uzla"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr ""
 
@@ -1742,7 +1742,7 @@ msgstr "Toto je čas, kedy ťažiar vytvoril blok, a to ešte predtým, ako bol 
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr ""
 

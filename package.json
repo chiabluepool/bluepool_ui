@@ -1,8 +1,8 @@
 {
-  "name": "chia-blockchain",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "GUI for Chia Blockchain",
-  "productName": "Chia Blockchain",
+  "name": "Bluepool",
+  "author": "Bluepool <hello@chia.net> (https://www.bluepool.io/)",
+  "description": "GUI for Bluepool",
+  "productName": "Bluepool",
   "private": true,
   "homepage": "./",
   "main": "build/electron/main.js",

@@ -213,7 +213,7 @@ msgstr "Booty wit' hash {headerHash} does nah exist."
 msgid "Browse"
 msgstr "Look up"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "But ye be currently plunderin' <0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "Ye don't 'ave private treasure map fer them coordinates. Safe only if ye
 msgid "Node ID"
 msgstr "Node ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "None of your barrages has hit a ship."
 
@@ -1742,7 +1742,7 @@ msgstr "'tis the time the booty was gotten by the plunderer, which be afore 'tis
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Here it shows the last time yer plunderer attempted t' take a ship fer booty. <0>Look fer more</0>"
 

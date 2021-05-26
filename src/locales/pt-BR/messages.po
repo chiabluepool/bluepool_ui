@@ -213,7 +213,7 @@ msgstr "Bloco com hash {headerHash} não existe."
 msgid "Browse"
 msgstr "Navegar"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "Mas atualmente você está cultivando <0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "Nenhuma chave privada para um ou ambos os endereços. Seguro apenas se v
 msgid "Node ID"
 msgstr "ID do nó"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Nenhum de seus lotes passou pelo filtro de lotes ainda."
 
@@ -1742,7 +1742,7 @@ msgstr "Este é o momento em que o bloco foi criado pelo fazendeiro, que é ante
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Esta tabela mostra a última vez que sua fazenda tentou ganhar um desafio de bloco. <0>Saiba mais</0>"
 

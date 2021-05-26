@@ -95,10 +95,6 @@ const cols = [
 ];
 
 const getStatusItems = (email, connected, networkInfo, balance, total_partials, total_plots) => {
-  console.log(email)
-  console.log(connected)
-  console.log(networkInfo)
-  console.log(balance)
 
   const status_items = [];
   status_items.push({

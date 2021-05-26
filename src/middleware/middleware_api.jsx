@@ -33,7 +33,8 @@ import {
   getPlotDirectories,
   pingHarvester,
   refreshPlots,
-  loggedInHarvester
+  loggedInHarvester,
+  getConnectionsHarvester
 } from '../modules/harvesterMessages';
 import { plottingStopped } from '../modules/plotter_messages';
 import { plotQueueInit, plotQueueUpdate } from '../modules/plotQueue';
@@ -50,22 +51,37 @@ function sleep(ms) {
 }
 
 async function ping_harvester(store) {
+  check_connection(store)
   store.dispatch(pingHarvester());
   await sleep(1000);
+  store.dispatch(getConnectionsHarvester())
   const state = store.getState();
   const { harvester_connected } = state.daemon_state;
   if (!harvester_connected) {
     ping_harvester(store);
   }
 }
+var running_check = false
+async function check_connection(store) {
+  if (running_check === true) {
+    return
+  }
+  running_check = false
+  await sleep(3000);
+  store.dispatch(getConnectionsHarvester())
+  const state = store.getState();
+  const { connected } = state.harvester_state;
+  if (!connected) {
+    check_connection(store);
+  }
+}
 
 export function refreshAllState() {
   return async (dispatch, getState) => {
     dispatch(startService(service_harvester));
-
     dispatch(getNetworkInfo());
-    dispatch(get_connection_info());
-
+    dispatch(getConnectionsHarvester())
+  
     dispatch(getPlots());
     dispatch(getPlotDirectories());
   };

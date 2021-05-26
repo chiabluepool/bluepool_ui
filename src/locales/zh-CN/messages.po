@@ -213,7 +213,7 @@ msgstr "哈希为 {headerHash} 的区块不存在。"
 msgid "Browse"
 msgstr "浏览"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:50
+#: src/components/farm/FarmLastAttemptedProof.tsx:49
 msgid "But you are currently farming <0/>"
 msgstr "但你目前正在耕种<0/>"
 
@@ -1009,7 +1009,7 @@ msgstr "这个地址没有对应的私钥, 建议把奖励发送到另外一个�
 msgid "Node ID"
 msgstr "节点ID"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:44
+#: src/components/farm/FarmLastAttemptedProof.tsx:45
 msgid "None of your plots have passed the plot filter yet."
 msgstr "你的农田还没有通过过滤器检查."
 
@@ -1742,7 +1742,7 @@ msgstr "由农夫创建的区块的时间, 这个时间早于它被确认的时�
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:39
+#: src/components/farm/FarmLastAttemptedProof.tsx:37
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "这个表格里面显示的是你的农场尝试过的区块挑战. <0>了解更多</0>"
 
