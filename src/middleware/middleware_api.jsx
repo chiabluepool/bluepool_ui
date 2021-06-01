@@ -97,7 +97,7 @@ export const handle_message = async (store, payload, errorProcessed) => {
       if (payload.origin === service_harvester) {
       // get plots is working only when harcester is connected
       const state = store.getState();
-      if (!state.farming_state.logged_in_received) {
+      if (!state.harvester_state.logged_in_received) {
         store.dispatch(loggedInHarvester())
       }
       if (!state.farming_state.harvester?.plots) {
