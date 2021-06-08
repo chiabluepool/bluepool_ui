@@ -4,6 +4,7 @@ import createWallet from '../util/createWallet';
 import type FarmingInfo from '../types/FarmingInfo';
 
 type IncomingState = {
+  mnemonic: string[];
   logged_in_received: boolean;
   logged_in: boolean;
   status: {
@@ -27,6 +28,7 @@ type IncomingState = {
 };
 
 const initialState: IncomingState = {
+  mnemonic: [],
   logged_in_received: false,
   logged_in: false,
   email: '',

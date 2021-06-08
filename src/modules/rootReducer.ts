@@ -21,6 +21,7 @@ import localStorageReducer from './localStorage';
 const reducers = {
   daemon_state: daemonReducer,
   websocket: websocketReducer,
+  mnemonic_state: mnemonicReducer,
   harvester_state: incomingReducer,
   wallet_menu: walletMenuReducer,
   create_options: createWallet,
