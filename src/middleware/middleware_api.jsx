@@ -129,9 +129,6 @@ export const handle_message = async (store, payload, errorProcessed) => {
       const { queue, state } = payload.data;
       await store.dispatch(plotQueueUpdate(queue, state));
       // updated state of the plots
-      if (state === 'state') {
-        store.dispatch(refreshPlots());
-      }
     }
   } else if (payload.command === 'start_service') {
     const { service } = payload.data;
