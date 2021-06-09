@@ -62,7 +62,12 @@ msgstr "操作"
 #~ msgid "Add"
 #~ msgstr "追加"
 
-#: src/components/plot/PlotHeader.tsx:51
+#: src/components/plot/PlotAddKeys.tsx:46
+#: src/components/plot/PlotHeader.tsx:71
+msgid "Add Keys"
+msgstr ""
+
+#: src/components/plot/PlotHeader.tsx:60
 msgid "Add Plot Directory"
 msgstr "耕地ディレクトリを追加"
 
@@ -75,9 +80,9 @@ msgstr "耕地をキューに追加"
 #~ msgstr "ウォレットを追加"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:35
-#: src/components/plot/PlotHeader.tsx:33
+#: src/components/plot/PlotHeader.tsx:37
 #: src/components/plot/add/PlotAdd.tsx:54
-#: src/components/plot/overview/PlotOverviewHero.tsx:29
+#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Add a Plot"
 msgstr "耕地を追加"
 
@@ -147,7 +152,7 @@ msgstr "本当に k={plotSize} を使用しますか？"
 #~ msgid "Backup file is used to restore smart wallets."
 #~ msgstr "バックアップファイルはスマートウォレットの復元に使用します。"
 
-#: src/components/pool/Pool.jsx:167
+#: src/components/pool/Pool.jsx:163
 msgid "Balance"
 msgstr "残高"
 
@@ -281,6 +286,7 @@ msgid "Choose Plot Size"
 msgstr "耕地容量を選択"
 
 #: src/components/plot/PlotAddDirectoryDialog.tsx:76
+#: src/components/plot/PlotAddKeys.tsx:51
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:55
 msgid "Close"
 msgstr "閉じる"
@@ -344,7 +350,7 @@ msgstr "了承"
 #~ msgstr "手動で接続"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:47
-#: src/components/pool/Pool.jsx:112
+#: src/components/pool/Pool.jsx:108
 msgid "Connected"
 msgstr "接続済み"
 
@@ -352,7 +358,7 @@ msgstr "接続済み"
 msgid "Connecting to wallet"
 msgstr "ウォレットに接続中"
 
-#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:106
 msgid "Connection Status"
 msgstr "接続状態"
 
@@ -557,9 +563,12 @@ msgstr "ビットフィールドを使わずに耕す"
 #~ msgstr "分散型アイデンティティのオプション"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:41
-#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0>"
 msgstr "既にこのデバイス上に耕地をお持ちですか？<0>耕地ディレクトリを追加</0>"
+
+#: src/components/plot/overview/PlotOverviewHero.tsx:41
+msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0><1/><2>Add Plot Keys</2>"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:30
 msgid "Does your machine support parallel plotting?"
@@ -578,9 +587,13 @@ msgstr "お使いのデバイスは並列で耕せますか？"
 msgid "Edit"
 msgstr "編集"
 
-#: src/components/pool/Pool.jsx:105
+#: src/components/pool/Pool.jsx:101
 #: src/components/selectKey/SelectKey.tsx:49
 msgid "Email"
+msgstr ""
+
+#: src/components/selectKey/WalletImport.tsx:71
+msgid "Enter the 24 word mnemonic in order to use plots created by this key."
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:67
@@ -805,6 +818,10 @@ msgstr "ホスト名"
 msgid "If none selected, then it will default to the temporary directory."
 msgstr "空欄の場合、1つ目の一時ディレクトリを使用します。"
 
+#: src/components/selectKey/WalletImport.tsx:68
+msgid "Import Plots from Mnemonics"
+msgstr ""
+
 #: src/components/wallet/WalletImport.tsx:64
 #~ msgid "Import Wallet from Mnemonics"
 #~ msgstr "合言葉でウォレットをインポート"
@@ -955,7 +972,7 @@ msgstr "メモリ使用量を増やすと速度が微上昇します"
 #~ msgid "My Pubkey"
 #~ msgstr "私の公開鍵"
 
-#: src/components/pool/Pool.jsx:129
+#: src/components/pool/Pool.jsx:125
 msgid "Network Name"
 msgstr "ネットワーク名"
 
@@ -1033,8 +1050,8 @@ msgstr "該当なし"
 #~ msgstr "未承認"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:48
-#: src/components/pool/Pool.jsx:114
-#: src/components/pool/Pool.jsx:121
+#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:117
 msgid "Not connected"
 msgstr "未接続"
 
@@ -1046,11 +1063,11 @@ msgstr "見つからない耕地"
 msgid "Number of buckets"
 msgstr "バケツ数"
 
-#: src/components/pool/Pool.jsx:137
+#: src/components/pool/Pool.jsx:133
 msgid "Number of partial proofs in last 24 hours"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:147
+#: src/components/pool/Pool.jsx:143
 msgid "Number of plots used for farming. (includes all harvesters linked to this account)"
 msgstr ""
 
@@ -1074,7 +1091,7 @@ msgstr "OK"
 #~ msgid "Outgoing"
 #~ msgstr "出金"
 
-#: src/components/pool/Pool.jsx:134
+#: src/components/pool/Pool.jsx:130
 msgid "Partial Proofs"
 msgstr ""
 
@@ -1232,11 +1249,11 @@ msgstr "この耕地は {0} と重複しています"
 msgid "Plots Passed Filter"
 msgstr "フィルターを通過した耕地数"
 
-#: src/components/plot/overview/PlotOverviewHero.tsx:23
+#: src/components/plot/overview/PlotOverviewHero.tsx:27
 msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
 msgstr "耕地とは、チアを収穫し、得るためにハードドライブ上に確保する領域です。<0>詳しく</0>"
 
-#: src/components/pool/Pool.jsx:144
+#: src/components/pool/Pool.jsx:140
 msgid "Plots being farmed"
 msgstr ""
 
@@ -1257,11 +1274,11 @@ msgstr "ビットフィールドを有効にして耕すと、書き込み量が
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:23
-#: src/components/pool/Pool.jsx:247
+#: src/components/pool/Pool.jsx:243
 msgid "Pool"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:229
+#: src/components/pool/Pool.jsx:225
 msgid "Pool Farming"
 msgstr ""
 
@@ -1388,7 +1405,7 @@ msgstr "最大使用 RAM"
 #~ msgid "Recover DID wallet"
 #~ msgstr "DID ウォレットを復元"
 
-#: src/components/plot/PlotHeader.tsx:43
+#: src/components/plot/PlotHeader.tsx:49
 msgid "Refresh Plots"
 msgstr "耕地一覧を更新"
 
@@ -1426,6 +1443,7 @@ msgstr "問題を報告"
 #~ msgstr "安全にスキップ可能"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:105
+#: src/components/plot/PlotAddKeys.tsx:55
 msgid "Save"
 msgstr "保存"
 
@@ -1574,7 +1592,7 @@ msgid "State"
 msgstr "状態"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:65
-#: src/components/pool/Pool.jsx:120
+#: src/components/pool/Pool.jsx:116
 msgid "Status"
 msgstr "状態"
 
@@ -2027,7 +2045,7 @@ msgstr "あなたのフルノード接続"
 msgid "Your Harvester Network"
 msgstr "あなたの収穫機ネットワーク"
 
-#: src/components/pool/Pool.jsx:170
+#: src/components/pool/Pool.jsx:166
 msgid "Your current balance. Go to bluepool.io to make a withdrawal."
 msgstr ""
 

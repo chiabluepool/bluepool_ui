@@ -62,7 +62,12 @@ msgstr "動作"
 #~ msgid "Add"
 #~ msgstr "新增"
 
-#: src/components/plot/PlotHeader.tsx:51
+#: src/components/plot/PlotAddKeys.tsx:46
+#: src/components/plot/PlotHeader.tsx:71
+msgid "Add Keys"
+msgstr ""
+
+#: src/components/plot/PlotHeader.tsx:60
 msgid "Add Plot Directory"
 msgstr "新增耕地資料夾"
 
@@ -75,9 +80,9 @@ msgstr "新增耕地至隊列"
 #~ msgstr "新增錢包"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:35
-#: src/components/plot/PlotHeader.tsx:33
+#: src/components/plot/PlotHeader.tsx:37
 #: src/components/plot/add/PlotAdd.tsx:54
-#: src/components/plot/overview/PlotOverviewHero.tsx:29
+#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Add a Plot"
 msgstr "新增耕地"
 
@@ -147,7 +152,7 @@ msgstr "你確定 k 的大小為 {plotSize}?"
 #~ msgid "Backup file is used to restore smart wallets."
 #~ msgstr "備份檔案可用於復原智慧錢包。"
 
-#: src/components/pool/Pool.jsx:167
+#: src/components/pool/Pool.jsx:163
 msgid "Balance"
 msgstr "餘額"
 
@@ -281,6 +286,7 @@ msgid "Choose Plot Size"
 msgstr "選擇耕地大小"
 
 #: src/components/plot/PlotAddDirectoryDialog.tsx:76
+#: src/components/plot/PlotAddKeys.tsx:51
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:55
 msgid "Close"
 msgstr "關閉"
@@ -344,7 +350,7 @@ msgstr "確認"
 #~ msgstr "連線到其他同儕"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:47
-#: src/components/pool/Pool.jsx:112
+#: src/components/pool/Pool.jsx:108
 msgid "Connected"
 msgstr "已連線"
 
@@ -352,7 +358,7 @@ msgstr "已連線"
 msgid "Connecting to wallet"
 msgstr "連線至錢包中"
 
-#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:106
 msgid "Connection Status"
 msgstr "連線狀態"
 
@@ -557,9 +563,12 @@ msgstr "禁用 bitfield 耕地"
 #~ msgstr "分散式識別選項"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:41
-#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0>"
 msgstr "你有已存在的耕地在本機上？ <0>增加耕地資料夾</0>"
+
+#: src/components/plot/overview/PlotOverviewHero.tsx:41
+msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0><1/><2>Add Plot Keys</2>"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:30
 msgid "Does your machine support parallel plotting?"
@@ -578,9 +587,13 @@ msgstr "你的機器支援平行耕地嗎？"
 msgid "Edit"
 msgstr "編輯"
 
-#: src/components/pool/Pool.jsx:105
+#: src/components/pool/Pool.jsx:101
 #: src/components/selectKey/SelectKey.tsx:49
 msgid "Email"
+msgstr ""
+
+#: src/components/selectKey/WalletImport.tsx:71
+msgid "Enter the 24 word mnemonic in order to use plots created by this key."
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:67
@@ -805,6 +818,10 @@ msgstr "主機名稱"
 msgid "If none selected, then it will default to the temporary directory."
 msgstr "如無選擇，將會預設至臨時資料夾。"
 
+#: src/components/selectKey/WalletImport.tsx:68
+msgid "Import Plots from Mnemonics"
+msgstr ""
+
 #: src/components/wallet/WalletImport.tsx:64
 #~ msgid "Import Wallet from Mnemonics"
 #~ msgstr "以助記符號匯入錢包"
@@ -955,7 +972,7 @@ msgstr "更多記憶體可略微提高速度"
 #~ msgid "My Pubkey"
 #~ msgstr "我的公鑰"
 
-#: src/components/pool/Pool.jsx:129
+#: src/components/pool/Pool.jsx:125
 msgid "Network Name"
 msgstr "網路名稱"
 
@@ -1033,8 +1050,8 @@ msgstr "無可用"
 #~ msgstr "還未確認"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:48
-#: src/components/pool/Pool.jsx:114
-#: src/components/pool/Pool.jsx:121
+#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:117
 msgid "Not connected"
 msgstr "未連線"
 
@@ -1046,11 +1063,11 @@ msgstr "沒找到的耕地"
 msgid "Number of buckets"
 msgstr "桶數量"
 
-#: src/components/pool/Pool.jsx:137
+#: src/components/pool/Pool.jsx:133
 msgid "Number of partial proofs in last 24 hours"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:147
+#: src/components/pool/Pool.jsx:143
 msgid "Number of plots used for farming. (includes all harvesters linked to this account)"
 msgstr ""
 
@@ -1074,7 +1091,7 @@ msgstr "好"
 #~ msgid "Outgoing"
 #~ msgstr "匯出"
 
-#: src/components/pool/Pool.jsx:134
+#: src/components/pool/Pool.jsx:130
 msgid "Partial Proofs"
 msgstr ""
 
@@ -1232,11 +1249,11 @@ msgstr "耕地與 {0} 重複"
 msgid "Plots Passed Filter"
 msgstr "已通過篩選耕地"
 
-#: src/components/plot/overview/PlotOverviewHero.tsx:23
+#: src/components/plot/overview/PlotOverviewHero.tsx:27
 msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
 msgstr "耕地是在你硬碟上劃出的空間，用於耕種來賺取 Chia 。 <0>了解更多</0>"
 
-#: src/components/pool/Pool.jsx:144
+#: src/components/pool/Pool.jsx:140
 msgid "Plots being farmed"
 msgstr ""
 
@@ -1257,11 +1274,11 @@ msgstr "以 bitfield 規劃耕地可以減少約 30％ 的總寫入量，而現�
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:23
-#: src/components/pool/Pool.jsx:247
+#: src/components/pool/Pool.jsx:243
 msgid "Pool"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:229
+#: src/components/pool/Pool.jsx:225
 msgid "Pool Farming"
 msgstr ""
 
@@ -1388,7 +1405,7 @@ msgstr "最大記憶體使用量"
 #~ msgid "Recover DID wallet"
 #~ msgstr "恢復 DID 錢包"
 
-#: src/components/plot/PlotHeader.tsx:43
+#: src/components/plot/PlotHeader.tsx:49
 msgid "Refresh Plots"
 msgstr "刷新耕地"
 
@@ -1426,6 +1443,7 @@ msgstr "回報問題..."
 #~ msgstr "可安全跳過"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:105
+#: src/components/plot/PlotAddKeys.tsx:55
 msgid "Save"
 msgstr "儲存"
 
@@ -1574,7 +1592,7 @@ msgid "State"
 msgstr "狀態"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:65
-#: src/components/pool/Pool.jsx:120
+#: src/components/pool/Pool.jsx:116
 msgid "Status"
 msgstr "狀態"
 
@@ -2027,7 +2045,7 @@ msgstr "你的完整節點連線"
 msgid "Your Harvester Network"
 msgstr "你的收割機網路"
 
-#: src/components/pool/Pool.jsx:170
+#: src/components/pool/Pool.jsx:166
 msgid "Your current balance. Go to bluepool.io to make a withdrawal."
 msgstr ""
 

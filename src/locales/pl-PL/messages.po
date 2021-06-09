@@ -62,7 +62,12 @@ msgstr "Działania"
 #~ msgid "Add"
 #~ msgstr "Dodaj"
 
-#: src/components/plot/PlotHeader.tsx:51
+#: src/components/plot/PlotAddKeys.tsx:46
+#: src/components/plot/PlotHeader.tsx:71
+msgid "Add Keys"
+msgstr ""
+
+#: src/components/plot/PlotHeader.tsx:60
 msgid "Add Plot Directory"
 msgstr "Dodaj folder z działkami"
 
@@ -75,9 +80,9 @@ msgstr "Dodaj działkę, plot do kolejki"
 #~ msgstr "Dodaj Portfel"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:35
-#: src/components/plot/PlotHeader.tsx:33
+#: src/components/plot/PlotHeader.tsx:37
 #: src/components/plot/add/PlotAdd.tsx:54
-#: src/components/plot/overview/PlotOverviewHero.tsx:29
+#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Add a Plot"
 msgstr "Dodaj działkę"
 
@@ -147,7 +152,7 @@ msgstr "Czy na pewno chcesz użyć k={plotSize}?"
 #~ msgid "Backup file is used to restore smart wallets."
 #~ msgstr "Plik kopii zapasowej służy do przywracania smart portfeli."
 
-#: src/components/pool/Pool.jsx:167
+#: src/components/pool/Pool.jsx:163
 msgid "Balance"
 msgstr "Saldo"
 
@@ -281,6 +286,7 @@ msgid "Choose Plot Size"
 msgstr "Wybierz rozmiar działki"
 
 #: src/components/plot/PlotAddDirectoryDialog.tsx:76
+#: src/components/plot/PlotAddKeys.tsx:51
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:55
 msgid "Close"
 msgstr "Zamknij"
@@ -344,7 +350,7 @@ msgstr "Potwierdź"
 #~ msgstr "Połącz się z innymi peerami"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:47
-#: src/components/pool/Pool.jsx:112
+#: src/components/pool/Pool.jsx:108
 msgid "Connected"
 msgstr "Połączono"
 
@@ -352,7 +358,7 @@ msgstr "Połączono"
 msgid "Connecting to wallet"
 msgstr "Łączenie z portfelem"
 
-#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:106
 msgid "Connection Status"
 msgstr "Status Połączenia"
 
@@ -557,9 +563,12 @@ msgstr ""
 #~ msgstr "Opcje Rozproszonej Tożsamości"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:41
-#: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0>"
 msgstr "Czy masz już istniejące działki na tej maszynie? <0>Dodaj lokalizację działki</0>"
+
+#: src/components/plot/overview/PlotOverviewHero.tsx:41
+msgid "Do you have existing plots on this machine? <0>Add Plot Directory</0><1/><2>Add Plot Keys</2>"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:30
 msgid "Does your machine support parallel plotting?"
@@ -578,9 +587,13 @@ msgstr "Czy twoja maszyna wspiera równoległe wytyczanie działek?"
 msgid "Edit"
 msgstr "Edytuj"
 
-#: src/components/pool/Pool.jsx:105
+#: src/components/pool/Pool.jsx:101
 #: src/components/selectKey/SelectKey.tsx:49
 msgid "Email"
+msgstr ""
+
+#: src/components/selectKey/WalletImport.tsx:71
+msgid "Enter the 24 word mnemonic in order to use plots created by this key."
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:67
@@ -805,6 +818,10 @@ msgstr "Nazwa Hosta"
 msgid "If none selected, then it will default to the temporary directory."
 msgstr "Jeżeli nic nie zostanie wybrane, domyślne przypisanie to folder tymczasowy."
 
+#: src/components/selectKey/WalletImport.tsx:68
+msgid "Import Plots from Mnemonics"
+msgstr ""
+
 #: src/components/wallet/WalletImport.tsx:64
 #~ msgid "Import Wallet from Mnemonics"
 #~ msgstr "Importuj portfel z ziarna mnemonicznego"
@@ -955,7 +972,7 @@ msgstr "Więcej pamięci lekko zwiększa prędkość"
 #~ msgid "My Pubkey"
 #~ msgstr "Mój publiczny klucz"
 
-#: src/components/pool/Pool.jsx:129
+#: src/components/pool/Pool.jsx:125
 msgid "Network Name"
 msgstr "Nazwa sieci"
 
@@ -1033,8 +1050,8 @@ msgstr "Nie dostępne"
 #~ msgstr "Nie zostało jeszcze potwierdzone"
 
 #: src/components/core/components/FormatConnectionStatus/FormatConnectionStatus.tsx:48
-#: src/components/pool/Pool.jsx:114
-#: src/components/pool/Pool.jsx:121
+#: src/components/pool/Pool.jsx:110
+#: src/components/pool/Pool.jsx:117
 msgid "Not connected"
 msgstr "Nie połączono"
 
@@ -1046,11 +1063,11 @@ msgstr "Nie znaleziono działek"
 msgid "Number of buckets"
 msgstr "Liczba wiader"
 
-#: src/components/pool/Pool.jsx:137
+#: src/components/pool/Pool.jsx:133
 msgid "Number of partial proofs in last 24 hours"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:147
+#: src/components/pool/Pool.jsx:143
 msgid "Number of plots used for farming. (includes all harvesters linked to this account)"
 msgstr ""
 
@@ -1074,7 +1091,7 @@ msgstr "W porządku"
 #~ msgid "Outgoing"
 #~ msgstr "Wychodzące"
 
-#: src/components/pool/Pool.jsx:134
+#: src/components/pool/Pool.jsx:130
 msgid "Partial Proofs"
 msgstr ""
 
@@ -1232,11 +1249,11 @@ msgstr "Działka jest kopią {0}"
 msgid "Plots Passed Filter"
 msgstr "Działki które przeszły przez filtr"
 
-#: src/components/plot/overview/PlotOverviewHero.tsx:23
+#: src/components/plot/overview/PlotOverviewHero.tsx:27
 msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
 msgstr "Działki to przestrzeń na twoim twardym dysku wykorzystywana do farmienia i zarabiania Chia. <0>Dowiedz się więcej</0>"
 
-#: src/components/pool/Pool.jsx:144
+#: src/components/pool/Pool.jsx:140
 msgid "Plots being farmed"
 msgstr ""
 
@@ -1257,11 +1274,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:23
-#: src/components/pool/Pool.jsx:247
+#: src/components/pool/Pool.jsx:243
 msgid "Pool"
 msgstr ""
 
-#: src/components/pool/Pool.jsx:229
+#: src/components/pool/Pool.jsx:225
 msgid "Pool Farming"
 msgstr ""
 
@@ -1388,7 +1405,7 @@ msgstr "Maksymalne użycie pamięci RAM"
 #~ msgid "Recover DID wallet"
 #~ msgstr "Odzyskaj portfel DID"
 
-#: src/components/plot/PlotHeader.tsx:43
+#: src/components/plot/PlotHeader.tsx:49
 msgid "Refresh Plots"
 msgstr "Odśwież działki"
 
@@ -1426,6 +1443,7 @@ msgstr "Zgłoś problem..."
 #~ msgstr "Pominięcie jest bezpieczne"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:105
+#: src/components/plot/PlotAddKeys.tsx:55
 msgid "Save"
 msgstr "Zapisz"
 
@@ -1574,7 +1592,7 @@ msgid "State"
 msgstr "Stan"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:65
-#: src/components/pool/Pool.jsx:120
+#: src/components/pool/Pool.jsx:116
 msgid "Status"
 msgstr "Status"
 
@@ -2027,7 +2045,7 @@ msgstr "Twoje połączenie pełnego węzła"
 msgid "Your Harvester Network"
 msgstr "Twoja sieć zbieracza"
 
-#: src/components/pool/Pool.jsx:170
+#: src/components/pool/Pool.jsx:166
 msgid "Your current balance. Go to bluepool.io to make a withdrawal."
 msgstr ""
 
