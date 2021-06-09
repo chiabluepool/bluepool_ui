@@ -43,16 +43,9 @@ export default function PlotAddKeys(props: Props) {
   const directories = useSelector(
     (state: RootState) => state.farming_state.harvester.plot_directories ?? [],
   );
-  let words = useSelector(
+  const words = useSelector(
     (state: RootState) => state.mnemonic_state.mnemonic_input,
   );
-
-  words.forEach((word) => {
-    if (word === '') {
-      // @ts-ignore
-      words = null;
-    }
-  });
 
   function handleClose() {
     onClose();
@@ -70,11 +63,8 @@ export default function PlotAddKeys(props: Props) {
   }
   function handleSubmit() {
     // setSubmitted(true);
-    console.log(words);
-    if (words !== null) {
-      dispatch(add_new_key_action(words));
-      onClose();
-    }
+    dispatch(add_new_key_action(words));
+    onClose();
   }
 
   return (
