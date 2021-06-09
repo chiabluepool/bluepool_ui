@@ -69,6 +69,7 @@ async function check_connection(store) {
   running_check = false
   await sleep(3000);
   store.dispatch(getConnectionsHarvester())
+  store.dispatch(refreshPlots());
   const state = store.getState();
   const { connected } = state.harvester_state;
   if (!connected) {
@@ -83,6 +84,7 @@ export function refreshAllState() {
     dispatch(getConnectionsHarvester())
   
     dispatch(getPlots());
+    dispatch(refreshPlots());
     dispatch(getPlotDirectories());
   };
 }
@@ -99,6 +101,8 @@ export const handle_message = async (store, payload, errorProcessed) => {
       const state = store.getState();
       if (!state.harvester_state.logged_in_received) {
         store.dispatch(loggedInHarvester())
+        refreshAllState()
+
       }
       if (!state.farming_state.harvester?.plots) {
         store.dispatch(getPlots());
@@ -117,6 +121,7 @@ export const handle_message = async (store, payload, errorProcessed) => {
       store.dispatch(plotQueueInit(queue));
     }
   } else if (payload.command === 'state_changed') {
+
     const { origin } = payload;
     const { state } = payload.data;
 
@@ -149,6 +154,7 @@ export const handle_message = async (store, payload, errorProcessed) => {
   } else if (payload.command === 'logged_in') {
     if (payload.data.logged_in) {
       store.dispatch(push('/dashboard'));
+      refreshAllState()
     }
   }
   if (payload.data.success === false) {

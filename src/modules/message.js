@@ -14,7 +14,8 @@ import {
   signInHarvester,
   getAccountInfo,
   logOutHarvester,
-  loggedInHarvester
+  loggedInHarvester,
+  harvesterMessage
 } from './harvesterMessages';
 import {
   setBackupInfo,
@@ -123,39 +124,25 @@ export const send_transaction = (wallet_id, amount, fee, address) => {
   return action;
 };
 
-export const genereate_mnemonics = () => {
-  const action = walletMessage();
-  action.message.command = 'generate_mnemonic';
-  action.message.data = {};
-  return action;
-};
 
-export const add_key = (mnemonic, type, file_path) => {
-  const action = walletMessage();
+export const add_key = (mnemonic) => {
+  const action = harvesterMessage();
   action.message.command = 'add_key';
   action.message.data = {
-    mnemonic,
-    type,
-    file_path,
+    mnemonic
   };
   return action;
 };
 
 export const add_new_key_action = (mnemonic) => (dispatch) =>
-  async_api(dispatch, add_key(mnemonic, 'new_wallet', null), true).then(
+  async_api(dispatch, add_key(mnemonic), true).then(
     (response) => {
       if (response.data.success) {
         // Go to wallet
-        dispatch(resetMnemonic());
-        dispatch(format_message('get_public_keys', {}));
         dispatch(refreshAllState());
-        dispatch(push('/dashboard'));
       } else {
         if (response.data.word) {
           dispatch(setIncorrectWord(response.data.word));
-          dispatch(push('/wallet/import'));
-        } else if (response.data.error === 'Invalid order of mnemonic words') {
-          dispatch(push('/wallet/import'));
         }
         const { error } = response.data;
         dispatch(openErrorDialog(error));

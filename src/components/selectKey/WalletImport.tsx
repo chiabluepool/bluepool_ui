@@ -16,7 +16,7 @@ import { Flex, Logo } from '@chia/core';
 import { matchSorter } from 'match-sorter';
 import LayoutHero from '../layout/LayoutHero';
 import { mnemonic_word_added, resetMnemonic } from '../../modules/mnemonic';
-import { unselectFingerprint } from '../../modules/message';
+import { add_new_key_action, unselectFingerprint } from '../../modules/message';
 import type { RootState } from '../../modules/rootReducer';
 import english from '../../util/english';
 
@@ -112,18 +112,26 @@ export default function WalletImport() {
     (state: RootState) => state.mnemonic_state.mnemonic_input,
   );
 
+  let words = useSelector(
+    (state: RootState) => state.mnemonic_state.mnemonic_input,
+  );
+
+  words.forEach((word) => {
+    if (word === '') {
+      // @ts-ignore
+      words = null;
+    }
+  });
+
   function handleBack() {
     dispatch(resetMnemonic());
-
     history.push('/');
   }
 
   function handleSubmit() {
     setSubmitted(true);
-    const hasEmptyElement = mnemonic.find((element) => element === '');
-    if (!hasEmptyElement) {
-      dispatch(unselectFingerprint());
-      history.push('/wallet/restore');
+    if (words !== null) {
+      dispatch(add_new_key_action(words));
     }
   }
 
@@ -144,17 +152,7 @@ export default function WalletImport() {
           <Grid container spacing={2}>
             <Iterator submitted={submitted} />
           </Grid>
-          <Container maxWidth="xs">
-            <Button
-              onClick={handleSubmit}
-              type="submit"
-              variant="contained"
-              color="primary"
-              fullWidth
-            >
-              <Trans>Save</Trans>
-            </Button>
-          </Container>
+
         </Flex>
       </Container>
     </LayoutHero>

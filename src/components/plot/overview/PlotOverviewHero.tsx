@@ -6,6 +6,7 @@ import { CardHero, Link } from '@chia/core';
 import { PlotHero as PlotHeroIcon } from '@chia/icons';
 import PlotAddDirectoryDialog from '../PlotAddDirectoryDialog';
 import useOpenDialog from '../../../hooks/useOpenDialog';
+import PlotAddKeys from '../PlotAddKeys';
 
 export default function PlotOverviewHero() {
   const history = useHistory();
@@ -16,9 +17,11 @@ export default function PlotOverviewHero() {
   }
 
   function handleAddPlotDirectory() {
-    openDialog((
-      <PlotAddDirectoryDialog />
-    ));
+    openDialog(<PlotAddDirectoryDialog />);
+  }
+
+  function handleAddKeys() {
+    openDialog(<PlotAddKeys />);
   }
 
   return (
@@ -28,15 +31,18 @@ export default function PlotOverviewHero() {
           <PlotHeroIcon fontSize="large" />
           <Typography variant="body1">
             <Trans>
-              {'Plots are allocated space on your hard drive used to farm and earn Chia. '}
-              <Link target="_blank" href="https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture">Learn more</Link>
+              {
+                'Plots are allocated space on your hard drive used to farm and earn Chia. '
+              }
+              <Link
+                target="_blank"
+                href="https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture"
+              >
+                Learn more
+              </Link>
             </Trans>
           </Typography>
-          <Button
-            onClick={handleAddPlot}
-            variant="contained"
-            color="primary"
-          >
+          <Button onClick={handleAddPlot} variant="contained" color="primary">
             <Trans>Add a Plot</Trans>
           </Button>
 
@@ -45,7 +51,13 @@ export default function PlotOverviewHero() {
           <Typography variant="body1">
             <Trans>
               {'Do you have existing plots on this machine? '}
-              <Link onClick={handleAddPlotDirectory} variant="body1">Add Plot Directory</Link>
+              <Link onClick={handleAddPlotDirectory} variant="body1">
+                Add Plot Directory
+              </Link>
+              <br />
+              <Link onClick={handleAddKeys} variant="body1">
+                Add Plot Keys
+              </Link>
             </Trans>
           </Typography>
         </CardHero>

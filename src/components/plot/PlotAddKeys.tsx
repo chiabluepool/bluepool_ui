@@ -16,9 +16,11 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   Typography,
+  Container,
 } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import {
+  add_new_key_action,
   add_plot_directory_and_refresh,
   remove_plot_directory_and_refresh,
 } from '../../modules/message';
@@ -41,6 +43,16 @@ export default function PlotAddKeys(props: Props) {
   const directories = useSelector(
     (state: RootState) => state.farming_state.harvester.plot_directories ?? [],
   );
+  let words = useSelector(
+    (state: RootState) => state.mnemonic_state.mnemonic_input,
+  );
+
+  words.forEach((word) => {
+    if (word === '') {
+      // @ts-ignore
+      words = null;
+    }
+  });
 
   function handleClose() {
     onClose();
@@ -56,6 +68,14 @@ export default function PlotAddKeys(props: Props) {
       dispatch(add_plot_directory_and_refresh(directory));
     }
   }
+  function handleSubmit() {
+    // setSubmitted(true);
+    console.log(words);
+    if (words !== null) {
+      dispatch(add_new_key_action(words));
+      onClose();
+    }
+  }
 
   return (
     <Dialog
@@ -68,11 +88,22 @@ export default function PlotAddKeys(props: Props) {
       <DialogTitle id="confirmation-dialog-title">
         <Trans>Add Keys</Trans>
       </DialogTitle>
-      <WalletImport></WalletImport>
+      <WalletImport />
       <DialogActions>
         <Button autoFocus onClick={handleClose} color="secondary">
           <Trans>Close</Trans>
         </Button>
+        <Container maxWidth="xs">
+          <Button
+            onClick={handleSubmit}
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+          >
+            <Trans>Save</Trans>
+          </Button>
+        </Container>
       </DialogActions>
     </Dialog>
   );
