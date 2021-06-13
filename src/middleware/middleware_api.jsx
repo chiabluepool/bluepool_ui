@@ -51,9 +51,10 @@ function sleep(ms) {
 }
 
 async function ping_harvester(store) {
-  check_connection(store)
+  await sleep(3000);
   store.dispatch(pingHarvester());
   await sleep(1000);
+  check_connection(store)
   store.dispatch(getConnectionsHarvester())
   const state = store.getState();
   const { harvester_connected } = state.daemon_state;
@@ -82,7 +83,7 @@ export function refreshAllState() {
     dispatch(startService(service_harvester));
     dispatch(getNetworkInfo());
     dispatch(getConnectionsHarvester())
-  
+
     dispatch(getPlots());
     dispatch(refreshPlots());
     dispatch(getPlotDirectories());

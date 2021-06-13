@@ -29,7 +29,7 @@ export default function AppRouter() {
   if (!walletConnected) {
     return (
       <LayoutLoading>
-        <Trans>Connecting to wallet</Trans>
+        <Trans>Connecting to harvester</Trans>
       </LayoutLoading>
     );
   }
